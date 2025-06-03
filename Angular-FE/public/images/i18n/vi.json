@@ -1,0 +1,45 @@
+  {
+    "HOME": {
+  "TITLE": "Giới thiệu",
+   "DESCRIPTION": "Liên hệ",
+      "SIMPLE_WAY": "Cách đơn giản",
+      "MANAGE_PERSONAL": "để quản lý",
+      "FINANCES": "tài chính cá nhân",
+      "GET_STARTED": "Bắt đầu ngay",
+      "SECURE_DATA": "Dữ liệu an toàn 100%",
+      "USERS": "Hơn 1 triệu người dùng",
+      "REVIEWS": "100K+ đánh giá 5 sao",
+      "APP_OF_DAY": "Apple & Google đề xuất",
+
+      "TRACKER_TITLE": "Theo dõi chi tiêu đơn giản",
+      "TRACKER_DESC": "Ghi lại giao dịch chỉ trong vài giây. Phân loại rõ ràng thành các nhóm như Chi tiêu: Ăn uống, Mua sắm hoặc Thu nhập: Lương, Quà tặng.",
+
+      "BUDGET_TITLE": "Lập ngân sách dễ dàng",
+      "BUDGET_DESC": "Thiết lập ngân sách dễ theo dõi và kiểm soát tiến độ trong thời gian thực.",
+
+      "REPORT_TITLE": "Tổng quan rõ ràng",  
+      "REPORT_DESC": "Báo cáo giúp bạn hiểu rõ xu hướng chi tiêu. Hiểu dòng tiền ra vào với đồ thị dễ đọc.",
+
+      "FEATURES_TITLE": "Tính năng người dùng yêu thích",
+      "FEATURE_DEVICES": "Nhiều thiết bị",
+      "FEATURE_DEVICES_DESC": "Đồng bộ hóa an toàn trên nhiều thiết bị với chuẩn bảo mật ngân hàng.",
+      "FEATURE_RECURRING": "Giao dịch định kỳ",
+      "FEATURE_RECURRING_DESC": "Nhắc nhở hóa đơn định kỳ và giao dịch sắp đến hạn.",
+      "FEATURE_TRAVEL": "Chế độ du lịch",
+      "FEATURE_TRAVEL_DESC": "Hỗ trợ mọi loại tiền tệ với tỷ giá cập nhật.",
+      "FEATURE_SAVING": "Kế hoạch tiết kiệm",
+      "FEATURE_SAVING_DESC": "Theo dõi tiến độ tiết kiệm để đạt mục tiêu tài chính.",
+      "FEATURE_DEBT": "Quản lý nợ và vay",
+      "FEATURE_DEBT_DESC": "Quản lý nợ, khoản vay và tiến độ thanh toán.",
+      "FEATURE_EASY": "Nhập giao dịch dễ dàng",
+      "FEATURE_EASY_DESC": "Nhập giao dịch nhanh chóng, thủ công hoặc tự động.",
+
+      "COMMENT_TITLE": "Người dùng nói gì?",
+      "COMMENT_1":
+       "Money Lover quả là một ứng dụng hoàn hảo! Tôi và chồng đều sử dụng nó để quản lý và theo dõi tất cả thu chi cá nhân. Chúng tôi còn có thể lập các tài khoản và ngân sách cho gia đình chung của cả hai khi sử dụng một ứng dụng hoàn hảo như Money Lover. Hơn thế nữa, những người phát triển ứng dụng còn rất thực tế và cực kì có ích..",
+      "COMMENT_2":
+       "Ứng dụng này đã khiến tôi trở nên ngăn nắp và cẩn thận hơn, đặc biệt là với những vấn đề về tiền bạc. Nó có các tính năng rất thông minh và dễ dàng để sử dụng. Nếu bạn đang gặp khó khăn trong việc quản lý tài chính của mình thì Money Lover sẽ là một sự lựa chọn hoàn hảo đấy. Thử ngay để cảm nhận sự khác biệt!"
+       ,
+      "COMMENT_3": "Một ứng dụng đơn giản và dễ dàng truy cập cho phép bạn lập ngân sách hàng tuần, hàng tháng, hàng năm. Lịch trình tài chính rõ ràng giúp người dùng thiết lập báo động và gắn nhãn dán lên tất cả các giao dịch của mình."
+    }
+  }

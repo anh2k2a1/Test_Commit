@@ -1,0 +1,210 @@
+
+
+<div class="goal-container">
+  <div class="animated-bg"></div>
+
+  <button mat-raised-button color="accent" (click)="toggleForm()" *ngIf="!showForm">
+    <mat-icon>add</mat-icon> Tạo Mục Tiêu Mới
+  </button>
+
+ <mat-card class="goal-form-card animate-slide" *ngIf="showForm">
+  <mat-card-header>
+    <div mat-card-avatar class="goal-avatar">🎯</div>
+    <mat-card-title>{{ editingGoalId ? 'Chỉnh sửa mục tiêu' : 'Tạo Mục Tiêu Mới' }}</mat-card-title>
+    <mat-card-subtitle>Thiết lập mục tiêu tài chính của bạn</mat-card-subtitle>
+    
+    <!-- Nút hủy ở góc phải -->
+    <button mat-icon-button class="close-btn" (click)="toggleForm()" matTooltip="Đóng">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="goalForm" (ngSubmit)="addGoal()">
+      <!-- Nhóm 1 - Thông tin cơ bản -->
+     <div class="form-group">
+    <h3>Thông tin cơ bản</h3>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tiêu đề mục tiêu</mat-label>
+      <input matInput formControlName="title" placeholder="Ví dụ: Mua xe, du lịch Châu Âu..." />
+      <mat-error *ngIf="goalForm.get('title')?.hasError('required')">Vui lòng nhập tiêu đề</mat-error>
+      <mat-error *ngIf="goalForm.get('title')?.hasError('minlength')">Ít nhất 3 ký tự</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tên mục tiêu</mat-label>
+      <input matInput formControlName="name" placeholder="Ví dụ: Mục tiêu mua ô tô 2025" />
+      <mat-error *ngIf="goalForm.get('name')?.hasError('required')">Vui lòng nhập tên mục tiêu</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Loại mục tiêu</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let type of goalTypes" [value]="type.value">
+          {{type.label}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="goalForm.get('type')?.hasError('required')">Vui lòng chọn loại mục tiêu</mat-error>
+    </mat-form-field>
+  </div>
+
+      <!-- Nhóm 2 - Số tiền (chỉ hiển thị khi đã chọn loại) -->
+      <div *ngIf="goalForm.get('type')?.value" class="form-layout">
+        <div class="form-column">
+          <div class="form-group">  
+            <h3>Số tiền</h3>
+            
+            <div class="amount-fields">
+              <mat-form-field appearance="outline">
+                <mat-label>Số tiền bắt đầu</mat-label>
+                <input matInput type="number" formControlName="startAmount">
+                <span matTextSuffix>₫</span>
+                <mat-error *ngIf="goalForm.get('startAmount')?.hasError('required')">Vui lòng nhập số tiền</mat-error>
+                <mat-error *ngIf="goalForm.get('startAmount')?.hasError('min')">Số tiền không được âm</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Số tiền kết thúc</mat-label>
+                <input matInput type="number" formControlName="targetAmount" matTooltip="Tổng số tiền bạn muốn đạt được">
+                <span matTextSuffix>₫</span>
+                <mat-error *ngIf="goalForm.get('targetAmount')?.hasError('required')">Vui lòng nhập số tiền</mat-error>
+                <mat-error *ngIf="goalForm.get('targetAmount')?.hasError('min')">Số tiền phải lớn hơn 0</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="total-milestones">
+              Tổng các mốc: {{formatCurrency(getTotalMilestones())}} / {{formatCurrency(goalForm.get('targetAmount')?.value || 0)}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Nhóm 3 - Các mốc tiến trình (chiếm full width) -->
+        <div class="form-group">
+          <h3>Các mốc tiến trình</h3>
+          <p class="hint-text">Thiết lập các mốc tiền cần đạt được</p>
+
+          <div formArrayName="milestones" class="milestones-grid">
+            <ng-container *ngFor="let milestoneCtrl of milestones.controls; let i = index; let odd = odd">
+              <!-- Hiển thị mốc ở cột trái (số lẻ) -->
+              <div class="milestone-column" *ngIf="odd">
+                <div class="milestone-item">
+                  <mat-form-field appearance="outline" class="milestone-input">
+                    <mat-label>Mốc {{i + 1}}</mat-label>
+                    <input matInput type="number" [formControl]="milestoneCtrl"
+                      [placeholder]="'Ví dụ: ' + (1000000 * (i+1) * 5) + '₫'">
+                    <span matTextSuffix>₫</span>
+                    <mat-error *ngIf="milestoneCtrl.hasError('required')">Vui lòng nhập số tiền</mat-error>
+                    <mat-error *ngIf="milestoneCtrl.hasError('min')">Số tiền phải lớn hơn 0</mat-error>
+                  </mat-form-field>
+                  <button mat-icon-button color="warn" type="button" (click)="removeMilestone(i)"
+                    *ngIf="milestones.length > 1" matTooltip="Xóa mốc" class="delete-btn">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Hiển thị mốc ở cột phải (số chẵn) -->
+             <div class="milestone-column" *ngIf="!odd && i > 0">
+  <div class="milestone-item">
+    <mat-form-field appearance="outline" class="milestone-input">
+      <mat-label>Mốc {{i + 1}}</mat-label>
+      <input matInput type="number" [formControl]="milestoneCtrl" 
+             [placeholder]="'Ví dụ: ' + (1000000 * (i+1) * 5) + '₫'">
+      <span matTextSuffix>₫</span>
+      <mat-error *ngIf="milestoneCtrl.hasError('required')">Vui lòng nhập số tiền</mat-error>
+      <mat-error *ngIf="milestoneCtrl.hasError('min')">Số tiền phải lớn hơn 0</mat-error>
+    </mat-form-field>
+    <button mat-icon-button color="warn" type="button" (click)="removeMilestone(i)"
+            *ngIf="milestones.length > 1" matTooltip="Xóa mốc" class="delete-btn">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+            </ng-container>
+          </div>
+
+          <button mat-button type="button" (click)="addMilestone()" class="add-milestone-btn">
+            <mat-icon>add</mat-icon> Thêm Mốc
+          </button>
+
+          <div *ngIf="goalForm.get('milestones')?.hasError('exceedsTarget')" class="error-text">
+            Các mốc không được vượt quá số tiền kết thúc.
+          </div>
+          <div *ngIf="goalForm.get('milestones')?.hasError('invalidOrder')" class="error-text">
+            Các mốc phải theo thứ tự tăng dần.
+          </div>
+        </div>
+
+        <!-- Nhóm 4 - Hành động -->
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
+            <span *ngIf="!isLoading && !isSuccess">
+              <mat-icon>save</mat-icon> {{ editingGoalId ? 'Cập nhật' : 'Lưu Mục Tiêu' }}
+            </span>
+            <span *ngIf="isLoading">
+              <mat-icon class="spin-icon">autorenew</mat-icon> Đang xử lý...
+            </span>
+            <span *ngIf="isSuccess && !isLoading">
+              <mat-icon>check_circle</mat-icon> Thành công!
+            </span>
+          </button>
+          <button mat-button type="button" (click)="toggleForm()">Hủy</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Danh sách mục tiêu -->
+  <div *ngFor="let goal of goals" class="goal-card">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="goal-avatar">
+          <span *ngIf="goal.type === 'Target'">💼</span>
+          <span *ngIf="goal.type === 'Milestone'">💰</span>
+          <!-- <span *ngIf="goal.type === 'house'">🏠</span>
+          <span *ngIf="goal.type === 'car'">🚗</span> -->
+        </div>
+        <mat-card-title>{{goal.title}}</mat-card-title>
+        <mat-card-subtitle>{{goal.name}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="progress-info">
+          <span class="amount">{{formatCurrency(goal.milestones[goal.progress-1] || goal.startAmount)}} /
+            {{formatCurrency(goal.targetAmount)}}</span>
+          <span class="percentage">{{getProgressPercentage(goal)}}%</span>
+        </div>
+
+        <mat-progress-bar mode="determinate" [value]="getProgressPercentage(goal)" color="primary"></mat-progress-bar>
+
+        <div class="milestones">
+          <div *ngFor="let milestone of goal.milestones; let i = index" class="milestone"
+            [class.completed]="goal.progress > i" [class.current]="goal.progress === i"
+            matTooltip="Mốc {{i+1}}: {{formatCurrency(milestone)}}">
+            <div class="milestone-marker" [@goalStop]="getMilestoneState(goal, i)"></div>
+            <div class="milestone-amount">{{formatCurrency(milestone)}}</div>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="updateProgress(goal)" [disabled]="goal.isCompleted">
+          <mat-icon>add</mat-icon> Cập nhật tiến độ
+        </button>
+        <button mat-button color="warn" (click)="editGoal(goal)">
+          <mat-icon>edit</mat-icon> Chỉnh sửa
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Popup chúc mừng -->
+  <div *ngIf="showCongratsPopup" class="congrats-popup">
+    <div class="congrats-content">
+      <h2>{{ congratsMessage }}</h2>
+      <button mat-raised-button color="primary" (click)="closeCongratsPopup()">Đóng</button>
+    </div>
+  </div>
+</div>

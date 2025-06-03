@@ -1,0 +1,177 @@
+<div class="dashboard-grid">
+  <!-- Row 1: Pie Chart + Line Chart -->
+  <div class="chart-container pie-chart" @fadeInUp>
+    <mat-card class="animated-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Financial Distribution</mat-card-title>
+        <mat-card-subtitle>Transaction types breakdown</mat-card-subtitle>
+        <button mat-icon-button class="header-action" matTooltip="View details">
+          <mat-icon>info</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content class="chart-content">
+        <div class="chart-wrapper">
+          <canvas
+            baseChart
+            *ngIf="pieChartData"
+            type="pie"
+            [data]="pieChartData"
+            [options]="pieChartOptions"
+            (chartHover)="onPieHover($event)"
+            (chartClick)="onPieClick($event)"
+          ></canvas>
+          <div class="chart-center" *ngIf="pieChartHoverValue">
+            <div class="center-value">{{pieChartHoverValue | currency}}</div>
+            <div class="center-label">{{pieChartHoverLabel}}</div>
+          </div>
+        </div>
+        <div class="chart-summary" *ngIf="pieChartSummary">
+          <div class="summary-item" *ngFor="let item of pieChartSummary" @staggerIn>
+            <span class="summary-color" [style.background-color]="item.color"></span>
+            <span class="summary-label">{{item.label}}</span>
+            <span class="summary-value">{{item.value | currency}}</span>
+            <span class="summary-percent">
+              ({{(item.value / getPieTotal()) * 100 | number:'1.0-1'}}%)
+            </span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="chart-container line-chart" @fadeInUp>
+    <mat-card class="animated-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Account Balance</mat-card-title>
+        <mat-card-subtitle>Monthly balance history</mat-card-subtitle>
+        <button mat-icon-button class="header-action" matTooltip="Time range">
+          <mat-icon>date_range</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content class="chart-content">
+        <div class="metrics">
+          <div class="metric" *ngFor="let metric of metrics" @fadeIn>
+            <div class="value" [class.positive]="metric.value >= 0" [class.negative]="metric.value < 0">
+              {{metric.value | currency:metric.currency}}
+            </div>
+            <div class="label">{{metric.label}}</div>
+          </div>
+        </div>
+        <canvas
+          baseChart
+          *ngIf="lineChartData"
+          type="line"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          (chartHover)="onLineHover($event)"
+        ></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Row 2: Transactions + Budget Summary -->
+  <div class="table-container" @fadeInUp>
+    <mat-card class="animated-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Recent Transactions</mat-card-title>
+        <button mat-icon-button class="header-action" [routerLink]="['/transactions']" matTooltip="View all transactions">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="table-wrapper">
+          <table mat-table [dataSource]="transactions" class="transactions-table">
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef>ID</th>
+              <td mat-cell *matCellDef="let transaction" class="id-cell">
+                {{ transaction._id || transaction.id }}
+              </td>
+            </ng-container>
+
+            <!-- Note Column -->
+            <ng-container matColumnDef="note">
+              <th mat-header-cell *matHeaderCellDef>Description</th>
+              <td mat-cell *matCellDef="let transaction" class="note-cell">
+                <mat-icon class="transaction-icon" [class.income]="transaction.amount >= 0"
+                  [class.expense]="transaction.amount < 0">
+                  {{ transaction.amount >= 0 ? 'arrow_upward' : 'arrow_downward' }}
+                </mat-icon>
+                <span class="note-text">{{ transaction.note }}</span>
+                <span class="category-badge" *ngIf="transaction.category">
+                  {{ transaction.category }}
+                </span>
+              </td>
+            </ng-container>
+
+            <!-- Amount Column -->
+            <ng-container matColumnDef="amount">
+              <th mat-header-cell *matHeaderCellDef>Amount</th>
+              <td mat-cell *matCellDef="let transaction">
+                <span class="amount-badge" [class.positive]="transaction.amount >= 0"
+                  [class.negative]="transaction.amount < 0">
+                  {{ transaction.amount | currency }}
+                </span>
+              </td>
+            </ng-container>
+
+            <!-- Date Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef>Date</th>
+              <td mat-cell *matCellDef="let transaction" class="date-cell">
+                <div class="date-container">
+                  <div class="day-month">{{ transaction.createdAt | date: 'MMM dd' }}</div>
+                  <div class="year">{{ transaction.createdAt | date: 'yyyy' }}</div>
+                </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns" 
+                [class.row-hover]="true" 
+                (click)="onRowClick(row)"></tr>
+          </table>
+        </div>
+        <div class="see-all">
+          <button mat-button color="primary" [routerLink]="['/transactions']" class="see-all-button">
+            SEE ALL TRANSACTIONS <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="budget-container" @fadeInUp>
+    <mat-card class="animated-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Budget Summary</mat-card-title>
+        <button mat-icon-button class="header-action" matTooltip="Budget options">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="budget-item" *ngFor="let item of budgetItems" @staggerIn>
+          <div class="budget-header">
+            <div class="budget-label">
+              <span class="budget-color" [style.background-color]="item.color"></span>
+              {{ item.label }}
+            </div>
+            <div class="budget-percent">
+              {{ getProgress(item.amount, item.total) | number: '1.0-0' }}%
+            </div>
+          </div>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="getProgress(item.amount, item.total)"
+            [style.--mdc-linear-progress-track-color]="item.color + '33'"
+            [style.--mdc-linear-progress-active-indicator-color]="item.color"
+          ></mat-progress-bar>
+          <div class="budget-amount">
+            <span>{{ item.amount | currency }}</span>
+            <span>{{ item.total | currency }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

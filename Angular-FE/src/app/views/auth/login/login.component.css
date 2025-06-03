@@ -1,0 +1,264 @@
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.checkbox-container input {
+  margin-right: 6px;
+}
+
+/* Submit Button */
+.button-container {
+  margin-top: 1rem;
+}
+
+button[mat-raised-button] {
+  width: 100%;
+  height: 48px;
+  font-weight: 600;
+  font-size: 1rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Register link */
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.signup-link a {
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* Error */
+.error-message {
+  margin-top: 1rem;
+  color: #f44336;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Full-page loading overlay */
+.global-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  /* Left Side - Image & Marketing */
+  .left-column {
+    flex: 1;
+    background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)),
+      url("/images/reigster.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  .left-column h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .left-column p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 80%;
+  }
+
+  /* Right Side - Form */
+  .right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #555;
+  }
+
+  .checkbox-container input {
+    margin-right: 6px;
+  }
+
+  /* Submit Button */
+  .button-container {
+    margin-top: 1rem;
+  }
+
+  button[mat-raised-button] {
+    width: 100%;
+    height: 48px;
+    font-weight: 600;
+    font-size: 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Register link */
+  .signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+  }
+
+  .signup-link a {
+    color: #1976d2;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: #999;
+  }
+
+  /* Error */
+  .error-message {
+    margin-top: 1rem;
+    color: #f44336;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  /* Full-page loading overlay */
+  .global-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+
+    .left-column {
+      display: none;
+    }
+
+    .right-column {
+      padding: 1.5rem;
+    }
+
+    .form-container {
+      padding: 1rem;
+    }
+  }
+}

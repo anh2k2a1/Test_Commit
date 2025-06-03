@@ -1,0 +1,37 @@
+<footer class="footer-container">
+  <!-- Top section -->
+  <div class="footer-top">
+    <!-- Left content -->
+    <div class="footer-content">
+      <h2>{{ slogan.title }}</h2>
+      <p>{{ slogan.subtitle }}</p>
+
+      <!-- Store icons only -->
+      <div class="store-buttons">
+        <img src="/images/appstore.png" alt="App Store" class="store-icon-apple" />
+        <img src="/images/google-play.png" alt="Google Play" class="store-icon" />
+      </div>
+    </div>
+
+    <!-- Right content -->
+    <img src="/images/MOCKUP@4x.png" alt="App Preview" class="footer-image" />
+  </div>
+
+  <!-- Bottom section -->
+  <div class="footer-bottom">
+    <span class="copyright">{{ copyright }}</span>
+
+    <div class="footer-links">
+      <a *ngFor="let link of links" mat-button>{{ link }}</a>
+    </div>
+
+    <button
+      mat-fab
+      color="primary"
+      class="support-button"
+      matTooltip="Contact Support"
+      aria-label="Support">
+      <mat-icon>support_agent</mat-icon>
+    </button>
+  </div>
+</footer>

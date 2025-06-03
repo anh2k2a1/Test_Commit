@@ -1,0 +1,119 @@
+<mat-toolbar
+  [ngClass]="{
+    hidden: !isHeaderVisible,
+    'primary-bg': isHomeOrContact,
+    'white-header': !isHomeOrContact
+  }"
+>
+  <mat-toolbar-row
+    [ngClass]="{
+      centered: isHomeOrContact,
+      'full-width': !isHomeOrContact && !drawerOpened,
+      'drawer-open': !isHomeOrContact && drawerOpened
+    }"
+  >
+    <div class="header"></div>
+
+    <!-- Logo -->
+    <div
+      class="logo-container"
+      (click)="navigateToHome()"
+      role="button"
+      aria-label="Home"
+    >
+      <span class="logo-text">MoneyLover</span>
+    </div>
+
+    <!-- Nút menu cho mobile -->
+    <button
+      mat-icon-button
+      class="mobile-menu-btn"
+      (click)="toggleMobileMenu()"
+      *ngIf="isMobile"
+    >
+      <mat-icon>{{ isMobileMenuOpen ? "close" : "menu" }}</mat-icon>
+    </button>
+
+    <span class="example-spacer"></span>
+
+    <!-- Navigation Links (desktop only) -->
+    <ng-container *ngIf="!isMobile">
+      <!-- Chỉ hiển thị khi là /home hoặc /contact -->
+      <ng-container *ngIf="isHomeOrContact">
+        <span class="nav-item">
+          <a class="nav-link" href="https://finsify.com/" target="_blank">{{
+            "HOME.TITLE" | translate
+          }}</a>
+        </span>
+        <span class="nav-item">
+          <a class="nav-link" routerLink="/contact">{{
+            "HOME.DESCRIPTION" | translate
+          }}</a>
+        </span>
+      </ng-container>
+
+      <!-- Language Switcher (desktop only) -->
+      <span class="nav-item lang-switcher" (click)="toggleLanguage()">
+        <img
+          [src]="
+            currentLang === 'vi'
+              ? 'images/vietnam-translate.avif'
+              : 'images/english-translate.avif'
+          "
+          alt="Language Flag"
+          class="flag-icon"
+        />
+        <span class="lang-text">{{ "LANG" | translate }}</span>
+      </span>
+
+      <!-- Budget & Logout (chỉ khi không ở home/contact) -->
+      <ng-container *ngIf="!isHomeOrContact">
+        <span class="budget-display"
+          >Budget: ${{ budget | number : "1.2-2" }}</span
+        >
+        <button mat-icon-button (click)="logout()" aria-label="Logout">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </ng-container>
+
+      <!-- Login (chỉ khi ở home/contact) -->
+      <a
+        *ngIf="isHomeOrContact"
+        mat-button
+        routerLink="/auth/login"
+        aria-label="Login"
+      >
+        {{ "LOGIN" | translate }}
+        <mat-icon>login</mat-icon>
+      </a>
+    </ng-container>
+  </mat-toolbar-row>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" *ngIf="isMobile && isMobileMenuOpen">
+    <!-- Giới thiệu & Liên hệ chỉ hiện khi là home/contact -->
+    <ng-container *ngIf="isHomeOrContact">
+      <a routerLink="/about">{{ "ABOUT_US" | translate }}</a>
+      <a routerLink="/contact">{{ "HOME.DESCRIPTION" | translate }}</a>
+    </ng-container>
+
+    <!-- Language Switcher (mobile only) -->
+    <button (click)="toggleLanguage()" class="mobile-menu-lang-btn">
+      <img
+        [src]="
+          currentLang === 'vi'
+            ? 'images/vietnam-translate.avif'
+            : 'images/english-translate.avif'
+        "
+        alt="Flag"
+        class="flag-icon"
+      />
+      {{ "LANG" | translate }}
+    </button>
+
+    <!-- Login (mobile only) -->
+    <a *ngIf="isHomeOrContact" routerLink="/auth/login">
+      {{ "LOGIN" | translate }}
+    </a>
+  </div>
+</mat-toolbar>

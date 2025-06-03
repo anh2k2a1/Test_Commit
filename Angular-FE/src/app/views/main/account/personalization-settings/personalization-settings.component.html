@@ -1,0 +1,18 @@
+<mat-radio-group [(ngModel)]="theme" (change)="onThemeChange($event)">
+  <mat-radio-button value="light">Giao diện sáng</mat-radio-button>
+  <mat-radio-button value="dark">Giao diện tối</mat-radio-button>
+</mat-radio-group>
+
+<div>
+  <label>Cỡ chữ: {{ fontSize }}px</label>
+<mat-slider
+  min="10"
+  max="24"
+  step="1"
+  [(ngModel)]="fontSize"
+  (input)="onFontSizeInput($event)">
+</mat-slider>="fontSize = $event">
+</mat-slider>
+</div>
+
+<button mat-raised-button color="primary" (click)="onSave()">Lưu</button>

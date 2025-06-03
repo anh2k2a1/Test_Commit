@@ -1,0 +1,93 @@
+<app-header></app-header>
+
+<div class="contact-container">
+  <!-- Contact Form -->
+  <mat-card class="contact-card form-card">
+    <h2 class="m-title">Send Us a Message</h2>
+    <div *ngIf="formSubmitted" class="form-success">
+      Your message has been sent successfully!
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter your name" />
+        <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+          Name is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="Enter your email" />
+        <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+          Email is required.
+        </mat-error>
+        <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+          Invalid email address.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Message</mat-label>
+        <textarea matInput rows="5" formControlName="message" placeholder="Enter your message"></textarea>
+        <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+          Message is required.
+        </mat-error>
+        <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+          Minimum 10 characters required.
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+        Send Message
+      </button>
+    </form>
+  </mat-card>
+
+  <!-- Contact Info -->
+  <mat-card class="contact-card info-card">
+    <h2 class="m-title">Contact Info</h2>
+    <div class="info-item">
+      <mat-icon color="primary">location_on</mat-icon>
+      <span>123 Aptech Road, District 1, Ho Chi Minh City</span>
+    </div>
+    <div class="info-item">
+      <mat-icon color="primary">phone</mat-icon>
+      <span>(+84) 123-456-789</span>
+    </div>
+    <div class="info-item">
+      <mat-icon color="primary">email</mat-icon>
+      <span>contactaptech.vn</span>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        width="100%"
+        height="250"
+        frameborder="0"
+        style="border:0"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?q=aptech+vietnam&key=AIzaSyAWGkegACeYbLqbsjoDNlptjLLRr6ygp9s">
+      </iframe>
+    </div>
+  </mat-card>
+</div>
+
+<!-- Footer -->
+<div class="footer-bottom">
+  <p>© 2025 Finsify, JSC. All rights reserved.</p>
+
+  <div class="footer-links">
+    <a mat-button>About us</a>
+    <a mat-button>Career</a>
+    <a mat-button>Blog</a>
+    <a mat-button>Status</a>
+    <a mat-button>Privacy</a>
+    <a mat-button>Terms</a>
+  </div>
+
+  <button mat-fab color="primary" class="support-button" aria-label="Support">
+    <mat-icon>support_agent</mat-icon>
+  </button>
+</div>

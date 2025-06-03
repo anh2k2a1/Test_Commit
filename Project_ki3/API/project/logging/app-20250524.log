@@ -1,0 +1,294 @@
+[14:50:55 INF] Goal Reminder Service is starting.
+[14:50:57 INF] Now listening on: http://localhost:5101
+[14:50:57 INF] Application started. Press Ctrl+C to shut down.
+[14:50:57 INF] Hosting environment: Development
+[14:50:57 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[14:51:27 ERR] An error occurred while processing goal reminders.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-05-24T07:51:24.4756142Z", LastUpdateTimestamp: "2025-05-24T07:51:24.4756153Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.Repositories.GoalRepository.GetGoalsWithUpcomingRemindersAsync(DateTime currentTime) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Repositories\GoalRepository.cs:line 29
+   at Infrastructure.Services.GoalReminderService.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Services\GoalReminderService.cs:line 35
+[14:51:46 INF] Request started: POST /api/Users/login
+[14:52:51 INF] Goal Reminder Service is starting.
+[14:52:51 INF] Now listening on: http://localhost:5101
+[14:52:51 INF] Application started. Press Ctrl+C to shut down.
+[14:52:51 INF] Hosting environment: Development
+[14:52:51 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[14:53:11 INF] Request started: POST /api/Users
+[14:53:21 ERR] An error occurred while processing goal reminders.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-05-24T07:53:18.5766166Z", LastUpdateTimestamp: "2025-05-24T07:53:18.5766193Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.Repositories.GoalRepository.GetGoalsWithUpcomingRemindersAsync(DateTime currentTime) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Repositories\GoalRepository.cs:line 29
+   at Infrastructure.Services.GoalReminderService.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Services\GoalReminderService.cs:line 35
+[14:54:40 INF] Goal Reminder Service is starting.
+[14:54:40 INF] Now listening on: http://localhost:5101
+[14:54:40 INF] Application started. Press Ctrl+C to shut down.
+[14:54:40 INF] Hosting environment: Development
+[14:54:40 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[14:54:53 INF] Request started: POST /api/Users/login
+[14:55:02 INF] Request started: POST /api/Users
+[14:55:10 ERR] An error occurred while processing goal reminders.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-05-24T07:55:07.6218045Z", LastUpdateTimestamp: "2025-05-24T07:55:07.6218059Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.Repositories.GoalRepository.GetGoalsWithUpcomingRemindersAsync(DateTime currentTime) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Repositories\GoalRepository.cs:line 29
+   at Infrastructure.Services.GoalReminderService.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Services\GoalReminderService.cs:line 35
+[15:02:14 INF] Goal Reminder Service is starting.
+[15:02:46 INF] Goal Reminder Service is starting.
+[15:02:47 INF] Now listening on: http://localhost:5101
+[15:02:47 INF] Application started. Press Ctrl+C to shut down.
+[15:02:47 INF] Hosting environment: Development
+[15:02:47 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[15:03:03 INF] Request started: POST /api/Users
+[15:03:17 ERR] An error occurred while processing goal reminders.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-05-24T08:03:13.6052155Z", LastUpdateTimestamp: "2025-05-24T08:03:13.6052170Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.Repositories.GoalRepository.GetGoalsWithUpcomingRemindersAsync(DateTime currentTime) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Repositories\GoalRepository.cs:line 29
+   at Infrastructure.Services.GoalReminderService.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Services\GoalReminderService.cs:line 35
+[15:06:13 INF] Goal Reminder Service is starting.
+[15:06:14 INF] Now listening on: http://localhost:5101
+[15:06:14 INF] Application started. Press Ctrl+C to shut down.
+[15:06:14 INF] Hosting environment: Development
+[15:06:14 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[15:06:30 INF] Request started: POST /api/Users
+[15:24:57 INF] Goal Reminder Service is starting.
+[15:24:58 INF] Now listening on: http://localhost:5101
+[15:24:59 INF] Application started. Press Ctrl+C to shut down.
+[15:24:59 INF] Hosting environment: Development
+[15:24:59 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[15:25:26 INF] Request started: POST /api/Users
+[15:25:28 ERR] An error occurred while processing goal reminders.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-05-24T08:25:25.5298420Z", LastUpdateTimestamp: "2025-05-24T08:25:25.5298432Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Persistence.Repositories.GoalRepository.GetGoalsWithUpcomingRemindersAsync(DateTime currentTime) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Repositories\GoalRepository.cs:line 29
+   at Infrastructure.Services.GoalReminderService.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\Infrastructure\Persistence\Services\GoalReminderService.cs:line 35
+[15:40:22 INF] Goal Reminder Service is starting.
+[15:40:23 INF] No goals with upcoming reminders found.
+[15:40:23 INF] Now listening on: http://localhost:5101
+[15:40:23 INF] Application started. Press Ctrl+C to shut down.
+[15:40:23 INF] Hosting environment: Development
+[15:40:23 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[15:40:53 INF] Request started: POST /api/Users
+[15:40:54 INF] Request completed: POST /api/Users - Status: 201 - Duration: 869ms
+[15:41:03 INF] Request started: POST /api/Users/login
+[15:41:03 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 297ms
+[15:41:41 INF] Request started: POST /api/Budgets
+[15:43:29 INF] Goal Reminder Service is starting.
+[15:43:29 INF] No goals with upcoming reminders found.
+[15:43:29 INF] Now listening on: http://localhost:5101
+[15:43:30 INF] Application started. Press Ctrl+C to shut down.
+[15:43:30 INF] Hosting environment: Development
+[15:43:30 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[15:44:07 INF] Request started: POST /api/Users/login
+[15:44:07 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 806ms
+[15:44:31 INF] Request started: GET /api/Users
+[15:44:31 INF] Request completed: GET /api/Users - Status: 200 - Duration: 85ms
+[15:44:40 INF] Request started: POST /api/Budgets
+[15:44:40 INF] Request completed: POST /api/Budgets - Status: 201 - Duration: 160ms
+[15:44:52 INF] Request started: GET /api/Budgets/report
+[15:44:52 INF] Request completed: GET /api/Budgets/report - Status: 200 - Duration: 73ms
+[16:11:29 INF] Goal Reminder Service is starting.
+[16:11:30 INF] No goals with upcoming reminders found.
+[16:11:30 INF] Now listening on: http://localhost:5101
+[16:11:30 INF] Application started. Press Ctrl+C to shut down.
+[16:11:30 INF] Hosting environment: Development
+[16:11:30 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:11:54 INF] Request started: POST /api/Users/login
+[16:11:54 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 799ms
+[16:12:19 INF] Request started: GET /api/Users
+[16:12:19 INF] Request completed: GET /api/Users - Status: 200 - Duration: 79ms
+[16:12:35 INF] Request started: POST /api/Transactions
+[16:12:35 INF] Request completed: POST /api/Transactions - Status: 201 - Duration: 164ms
+[16:12:45 INF] Request started: POST /api/Transactions
+[16:12:45 INF] Request completed: POST /api/Transactions - Status: 201 - Duration: 12ms
+[16:12:56 INF] Request started: GET /api/Transactions/user/68318616b2000c4ceb3e9e57/recent
+[16:12:56 INF] Request completed: GET /api/Transactions/user/68318616b2000c4ceb3e9e57/recent - Status: 200 - Duration: 73ms
+[16:46:07 INF] Goal Reminder Service is starting.
+[16:46:08 INF] No goals with upcoming reminders found.
+[16:46:08 INF] Now listening on: http://localhost:5101
+[16:46:08 INF] Application started. Press Ctrl+C to shut down.
+[16:46:08 INF] Hosting environment: Development
+[16:46:08 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:46:41 INF] Request started: POST /api/Users/login
+[16:46:42 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 925ms
+[16:48:17 INF] Request started: POST /api/Users
+[16:48:17 INF] Request completed: POST /api/Users - Status: 201 - Duration: 337ms
+[16:48:36 INF] Request started: POST /api/Users/forgot-password
+[16:50:07 INF] Goal Reminder Service is starting.
+[16:50:08 INF] No goals with upcoming reminders found.
+[16:50:08 INF] Now listening on: http://localhost:5101
+[16:50:08 INF] Application started. Press Ctrl+C to shut down.
+[16:50:08 INF] Hosting environment: Development
+[16:50:08 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:50:31 INF] Request started: POST /api/Users/forgot-password
+[16:51:53 INF] Goal Reminder Service is starting.
+[16:51:53 INF] No goals with upcoming reminders found.
+[16:51:53 INF] Now listening on: http://localhost:5101
+[16:51:53 INF] Application started. Press Ctrl+C to shut down.
+[16:51:53 INF] Hosting environment: Development
+[16:51:53 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:52:17 INF] Request started: POST /api/Users/forgot-password
+[16:55:43 INF] Goal Reminder Service is starting.
+[16:55:44 INF] No goals with upcoming reminders found.
+[16:55:44 INF] Now listening on: http://localhost:5101
+[16:55:44 INF] Application started. Press Ctrl+C to shut down.
+[16:55:44 INF] Hosting environment: Development
+[16:55:44 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:56:04 INF] Request started: POST /api/Users/forgot-password
+[16:57:26 INF] Goal Reminder Service is starting.
+[16:57:26 INF] No goals with upcoming reminders found.
+[16:57:26 INF] Now listening on: http://localhost:5101
+[16:57:27 INF] Application started. Press Ctrl+C to shut down.
+[16:57:27 INF] Hosting environment: Development
+[16:57:27 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[16:57:34 INF] Request started: POST /api/Users/forgot-password
+[16:57:39 INF] Request completed: POST /api/Users/forgot-password - Status: 200 - Duration: 4418ms
+[17:03:37 INF] Goal Reminder Service is starting.
+[17:03:37 INF] No goals with upcoming reminders found.
+[17:03:38 INF] Now listening on: http://localhost:5101
+[17:03:38 INF] Application started. Press Ctrl+C to shut down.
+[17:03:38 INF] Hosting environment: Development
+[17:03:38 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[17:04:22 INF] Request started: POST /api/Users
+[17:04:22 INF] Request completed: POST /api/Users - Status: 201 - Duration: 725ms
+[17:04:40 INF] Request started: POST /api/Users/forgot-password
+[17:04:44 INF] Request completed: POST /api/Users/forgot-password - Status: 200 - Duration: 4102ms
+[17:07:01 INF] Goal Reminder Service is starting.
+[17:07:02 INF] No goals with upcoming reminders found.
+[17:07:02 INF] Now listening on: http://localhost:5101
+[17:07:03 INF] Application started. Press Ctrl+C to shut down.
+[17:07:03 INF] Hosting environment: Development
+[17:07:03 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API
+[17:07:19 INF] Request started: POST /api/Users/forgot-password
+[17:07:24 INF] Request completed: POST /api/Users/forgot-password - Status: 200 - Duration: 4197ms
+[17:07:32 INF] Request started: GET /reset-password
+[17:07:32 INF] Request completed: GET /reset-password - Status: 404 - Duration: 4ms

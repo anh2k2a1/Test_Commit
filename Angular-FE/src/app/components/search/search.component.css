@@ -1,0 +1,124 @@
+.search {
+  position: relative;
+  height: 40px;
+}
+
+.search input {
+  background-color: var(--mat-sys-surface-container-low);
+  border: 0;
+  font-size: 16px;
+  padding: 1rem;
+  height: 40px;
+  width: 40px;
+  transition: width 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 25px;
+}
+
+button {
+  background-color: var(--mat-sys-surface-container-low);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search.active input {
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search.active button {
+  transform: translateX(275px) rotate(360deg);
+}
+
+.vertical-divider {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vertical-divider.active {
+  display: block;
+  opacity: 1;
+}
+
+.filter {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  padding: 1rem;
+  width: 300px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.filter.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.search.active .catagory {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.star-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+mat-icon {
+  font-size: 28px;
+  color: gray;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.stars mat-icon:hover {
+  color: #ffb300;
+  transform: scale(1.2);
+}
+
+mat-icon.selected {
+  color: #ffb300;
+}
+
+
+.filter-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+mat-slider {
+  width: 100%;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

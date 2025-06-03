@@ -1,0 +1,42 @@
+[17:18:39 INF] Goal Reminder Service is starting.
+[17:18:40 INF] Now listening on: http://localhost:5101
+[17:18:40 INF] Application started. Press Ctrl+C to shut down.
+[17:18:40 INF] Hosting environment: Development
+[17:18:40 INF] Content root path: C:\Users\dangn\OneDrive\Desktop\Project_ki3\API
+[17:20:45 INF] Request started: GET /
+[17:20:45 INF] Request completed: GET / - Status: 404 - Duration: 42ms
+[17:21:12 INF] Request started: GET /api/Users
+[17:21:12 INF] Request completed: GET /api/Users - Status: 200 - Duration: 106ms
+[17:21:37 INF] Request started: POST /api/Transactions
+[17:21:37 INF] Request completed: POST /api/Transactions - Status: 401 - Duration: 11ms
+[17:22:01 INF] Request started: POST /api/Users/login
+[17:22:01 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 423ms
+[17:22:13 INF] Request started: POST /api/Transactions
+[17:22:13 INF] Request completed: POST /api/Transactions - Status: 401 - Duration: 2ms
+[17:22:22 INF] Request started: POST /api/Transactions
+[17:22:22 INF] Request completed: POST /api/Transactions - Status: 201 - Duration: 193ms
+[17:22:51 INF] Application is shutting down...
+[17:28:09 INF] Goal Reminder Service is starting.
+[17:28:10 INF] Now listening on: http://localhost:5101
+[17:28:10 INF] Application started. Press Ctrl+C to shut down.
+[17:28:10 INF] Hosting environment: Development
+[17:28:10 INF] Content root path: C:\Users\haian\Downloads\Project_ki3\API
+[17:29:04 INF] Request started: POST /api/Users
+[17:29:06 INF] Request completed: POST /api/Users - Status: 201 - Duration: 1186ms
+[17:29:12 INF] Request started: GET /api/Users
+[17:29:12 INF] Request completed: GET /api/Users - Status: 200 - Duration: 96ms
+[17:29:36 INF] Request started: POST /api/Users/login
+[17:29:37 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 528ms
+[17:30:10 INF] Request started: GET /api/Transactions/681b35f1304f200e6af485d8
+[17:30:10 INF] Request completed: GET /api/Transactions/681b35f1304f200e6af485d8 - Status: 404 - Duration: 158ms
+[18:15:22 INF] Goal Reminder Service is starting.
+[18:15:25 INF] Now listening on: http://localhost:5101
+[18:15:25 INF] Application started. Press Ctrl+C to shut down.
+[18:15:25 INF] Hosting environment: Development
+[18:15:25 INF] Content root path: C:\Users\haian\Downloads\Project_ki3\API
+[18:16:08 INF] Request started: GET /
+[18:16:08 INF] Request completed: GET / - Status: 404 - Duration: 230ms
+[18:16:21 INF] Request started: GET /api/Users
+[18:16:22 INF] Request completed: GET /api/Users - Status: 200 - Duration: 337ms
+[18:16:53 INF] Request started: POST /api/Users/login
+[18:16:54 INF] Request completed: POST /api/Users/login - Status: 200 - Duration: 1051ms

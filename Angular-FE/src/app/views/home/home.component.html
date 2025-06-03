@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<main>
+  <section class="tite">
+    <span class="b-title">
+      <span class="text">{{ 'HOME.SIMPLE_WAY' | translate }}</span><br />
+      {{ 'HOME.MANAGE_PERSONAL' | translate }} <span class="text-blue">{{ 'HOME.FINANCES' | translate }}</span>
+    </span>
+    <a mat-flat-button routerLink="/auth/login">{{ 'HOME.GET_STARTED' | translate }}</a>
+
+    <mat-grid-list cols="4" rowHeight="2:1">
+      <mat-grid-tile>
+        <div>
+           <img src="/images/icon-lock.png" alt="">
+          <span>{{ 'HOME.SECURE_DATA' | translate }}</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+           <img src="/images/introfeature.png" alt="">
+          <span>{{ 'HOME.USERS' | translate }}</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+           <img src="/images/introfeature-2.png" alt="">
+          <span>{{ 'HOME.REVIEWS' | translate }}</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+           <img src="/images/introfeature-3.png" alt="">
+          <span>{{ 'HOME.APP_OF_DAY' | translate }}</span>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+
+  <section style="flex-direction: row">
+    <img src="https://moneylover.me/img/details/Transaction@4x.png" alt="" />
+    <div>
+      <p class="title">{{ 'HOME.TRACKER_TITLE' | translate }}</p>
+      <span class="m-sub-title">{{ 'HOME.TRACKER_DESC' | translate }}</span>
+    </div>
+  </section>
+
+  <section style="flex-direction: row">
+    <div>
+      <p class="m-title">{{ 'HOME.BUDGET_TITLE' | translate }}</p>
+      <span class="m-sub-title">{{ 'HOME.BUDGET_DESC' | translate }}</span>
+    </div>
+    <img src="https://moneylover.me/img/details/budget@4x.png" alt="" />
+  </section>
+
+  <section style="flex-direction: row">
+    <img src="https://moneylover.me/img/details/REPORT@4x.png" alt="" />
+    <div>
+      <p class="m-title">{{ 'HOME.REPORT_TITLE' | translate }}</p>
+      <span class="m-sub-title">{{ 'HOME.REPORT_DESC' | translate }}</span>
+    </div>
+  </section>
+
+  <section>
+    <span class="m-title">{{ 'HOME.FEATURES_TITLE' | translate }}</span>
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <mat-grid-tile *ngFor="let feature of features">
+        <div>
+          <mat-icon>{{ feature.icon }}</mat-icon>
+          <p class="s-title">{{ feature.title | translate }}</p>
+          <span class="s-sub-title">{{ feature.desc | translate }}</span>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+
+  <section>
+    <span class="m-title">{{ 'HOME.COMMENT_TITLE' | translate }}</span>
+    <a mat-flat-button routerLink="/auth/login">{{ 'HOME.GET_STARTED' | translate }}</a>
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let comment of comments">
+        <div class="container-comment">
+          <span class="s-sub-title">{{ comment.text | translate }}</span>
+          <p class="s-title">{{ comment.user }}</p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+</main>
+
+<app-footer></app-footer>

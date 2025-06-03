@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Purchase Course</h2>
+    <mat-dialog-content>
+      <p>You are about to purchase <strong>{{ data.title }}</strong> for <strong>${{ data.price }}</strong>.</p>
+      <p>Please confirm to proceed with the transaction.</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancel</button>
+      <button mat-raised-button color="primary" (click)="onConfirm()">Confirm Purchase</button>
+    </mat-dialog-actions>

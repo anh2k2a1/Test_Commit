@@ -1,0 +1,9 @@
+<h3>Cài đặt thông báo</h3>
+
+<mat-slide-toggle [(ngModel)]="emailNotifications">Thông báo qua Email</mat-slide-toggle>
+<mat-slide-toggle [(ngModel)]="pushNotifications">Thông báo đẩy (Push)</mat-slide-toggle>
+<mat-slide-toggle [(ngModel)]="smsNotifications">Thông báo qua SMS</mat-slide-toggle>
+
+<div style="margin-top: 20px;">
+  <button mat-raised-button color="primary" (click)="onSave()">Lưu cài đặt</button>
+</div>

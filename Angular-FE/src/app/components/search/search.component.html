@@ -1,0 +1,126 @@
+<div class="flex h-full me-1">
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="onSearchQueryChange()"
+    />
+    <button mat-icon-button (click)="toggleSearch()">
+      <mat-icon>search</mat-icon>
+    </button>
+    <div class="filter">
+      <div class="flex-col" style="gap: 10px">
+        <!-- Course Filters -->
+        <div *ngIf="enableCourseFilters">
+          <span class="filter-label mt-1">Rating:</span>
+          <div class="stars">
+            <mat-icon
+              *ngFor="let star of [1, 2, 3, 4, 5]"
+              [class.selected]="selectedRating >= star"
+              (click)="selectRating(star)"
+              [@starAnimation]="selectedRating >= star ? 'selected' : 'unselected'"
+            >
+              {{ selectedRating >= star ? 'star' : 'star_border' }}
+            </mat-icon>
+          </div>
+          <div class="price-filter mt-1">
+            <span class="filter-label"
+              >Price Range: ${{ priceRange[0] }} - ${{ priceRange[1] }}</span
+            >
+            <mat-slider
+              [min]="0"
+              [max]="500"
+              [step]="10"
+              thumbLabel
+              tickInterval="50"
+              (change)="onPriceRangeChange()"
+            >
+              <input matSliderStartThumb [(ngModel)]="priceRange[0]" />
+              <input matSliderEndThumb [(ngModel)]="priceRange[1]" />
+            </mat-slider>
+          </div>
+          <div>
+            <span class="filter-label">Tags</span>
+            <mat-chip-listbox
+              multiple
+              [(ngModel)]="selectedTags"
+              (ngModelChange)="onTagSelectionChange($event)"
+            >
+              <mat-chip-option
+                *ngFor="let tag of availableTags"
+                [value]="tag"
+                [selectable]="true"
+              >
+                {{ tag | titlecase }}
+              </mat-chip-option>
+            </mat-chip-listbox>
+          </div>
+        </div>
+
+        <div *ngIf="enableTransactionFilters">
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input
+              [rangePicker]="picker"
+              (dateChange)="onDateRangeChange()"
+            >
+              <input
+                matStartDate
+                placeholder="Start date"
+                [(ngModel)]="dateRange.start"
+              />
+              <input
+                matEndDate
+                placeholder="End date"
+                [(ngModel)]="dateRange.end"
+              />
+            </mat-date-range-input>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+
+        <!-- Transaction Filters -->
+        <div *ngIf="enableTransactionFilters">
+          <div>
+            <span class="filter-label">Type</span>
+            <mat-chip-listbox
+              multiple
+              [(ngModel)]="selectedTransactionTypes"
+              (ngModelChange)="onTypeSelectionChange($event)"
+            >
+              <mat-chip-option
+                *ngFor="let type of availableTransactionTypes"
+                [value]="type"
+                [selectable]="true"
+              >
+                {{ type | titlecase }}
+              </mat-chip-option>
+            </mat-chip-listbox>
+          </div>
+          <div>
+            <span class="filter-label">Category</span>
+            <mat-chip-listbox
+              multiple
+              [(ngModel)]="selectedTransactionCategories"
+              (ngModelChange)="onCategorySelectionChange($event)"
+            >
+              <mat-chip-option
+                *ngFor="let category of filteredTransactionCategories"
+                [value]="category"
+                [selectable]="true"
+              >
+                {{ category | titlecase }}
+              </mat-chip-option>
+            </mat-chip-listbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ms-2 vertical-divider"></div>
+</div>

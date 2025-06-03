@@ -1,0 +1,43 @@
+{
+  "HOME": {
+    "TITLE":"About us ",
+       "DESCRIPTION": "Contact",
+
+    "SIMPLE_WAY": "Simple way",
+    "MANAGE_PERSONAL": "to manage",
+    "FINANCES": "personal finances",
+    "GET_STARTED": "Get Started",
+    "SECURE_DATA": "100% Secured data",
+    "USERS": "1 Million+ users",
+    "REVIEWS": "100K+ 5-star Reviews",
+    "APP_OF_DAY": "App of the day",
+
+    "TRACKER_TITLE": "Simple money tracker",
+    "TRACKER_DESC": "It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.",
+
+    "BUDGET_TITLE": "Painless budgeting",
+    "BUDGET_DESC": "Set budgets that are easy to follow and track your progress in real time.",
+
+    "REPORT_TITLE": "The whole picture in one place",
+    "REPORT_DESC": "One report to give a clear view on your spending patterns. Understand where your money comes and goes with easy-to-read graphs.",
+
+    "FEATURES_TITLE": "Features our users love",
+    "FEATURE_DEVICES": "Multiple devices",
+    "FEATURE_DEVICES_DESC": "Safely synchronize across devices with Bank standard security.",
+    "FEATURE_RECURRING": "Recurring transaction",
+    "FEATURE_RECURRING_DESC": "Get notified of recurring bills and transactions before due date.",
+    "FEATURE_TRAVEL": "Travel mode",
+    "FEATURE_TRAVEL_DESC": "All currencies supported with up-to-date exchange rate.",
+    "FEATURE_SAVING": "Saving plan",
+    "FEATURE_SAVING_DESC": "Keep track on savings process to meet your financial goals.",
+    "FEATURE_DEBT": "Debt and loan",
+    "FEATURE_DEBT_DESC": "Manage your debts, loans and payment process in one place.",
+    "FEATURE_EASY": "Effortless transaction entry",
+    "FEATURE_EASY_DESC": "Entry a transaction quickly and easily, manually or automatically.",
+
+    "COMMENT_TITLE": "See what others have to say",
+    "COMMENT_1": "Perfect app. My husband and I use it to track all our expenses and income. We generate our household accounts and budget using this fab app. Furthermore, the developers are hands-on and extremely helpful. Do not look any further. Get this app now!.",
+    "COMMENT_2": "This will keep you organized and in control, of money you do have and money you will have. This application is easy to use and will help you keep track of every dollar.",
+    "COMMENT_3": "A simple, accessible app that allows you to budget across weeks, months and years. The neat financial calendar lets you set up alerts and keep tabs on all transactions. Plus, it works with all currencies."
+  }
+}

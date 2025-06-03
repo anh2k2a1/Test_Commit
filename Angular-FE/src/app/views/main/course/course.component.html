@@ -1,0 +1,76 @@
+<div class="flex">
+  <!-- code cũ -->
+  <!-- <app-search
+    [enableCourseFilters]="true"
+    [availableTags]="availableTags"
+    (searchCriteriaChange)="onSearchCriteriaChange($event)"
+  ></app-search> -->
+
+<app-search
+  [enableCourseFilters]="true"
+  [availableTags]="availableTags"
+  [availableTransactionTypes]="availableTransactionTypes"
+  (searchCriteriaChange)="onSearchChanged($event)">
+</app-search>
+  <div class="course-container">
+    <!-- GỢI Ý AI -->
+    <div class="recommend-section">
+      <h3 class="highlight-title">🎯 Gợi ý khóa học dành riêng cho bạn</h3>
+      <div class="course-grid">
+        <mat-card
+          *ngFor="let course of recommendedCourses"
+          class="course-card recommended"
+          [routerLink]="['/main/course', course.id]"
+        >
+          <img [src]="course.imageUrl" alt="" class="course-image" />
+          <mat-card-content class="flex-col content">
+            <mat-card-title>{{ course.title }}</mat-card-title>
+            <span class="s-subtitle">{{ course.desc }}</span>
+            <mat-chip-listbox>
+              <mat-chip *ngFor="let tag of course.tags" disabled>
+                {{ tag | titlecase }}
+              </mat-chip>
+            </mat-chip-listbox>
+            <div class="flex items-center">
+              <span *ngFor="let star of generateStars(course.rating)" class="star">
+                <mat-icon *ngIf="star === 'full'">star</mat-icon>
+                <mat-icon *ngIf="star === 'half'">star_half</mat-icon>
+                <mat-icon *ngIf="star === 'empty'">star_border</mat-icon>
+              </span>
+            </div>
+            <span class="price">{{ getFormattedPrice(course.price) | async }}</span>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- TẤT CẢ KHOÁ HỌC -->
+    <span class="m-title">Tất cả khóa học</span>
+    <div class="course-grid">
+      <mat-card
+        *ngFor="let course of filteredCourses"
+        class="course-card"
+        [routerLink]="['/main/course', course.id]"
+      >
+        <img [src]="course.imageUrl" alt="" class="course-image" />
+        <mat-card-content class="flex-col content">
+          <mat-card-title>{{ course.title }}</mat-card-title>
+          <span class="s-subtitle">{{ course.desc }}</span>
+          <mat-chip-listbox>
+            <mat-chip *ngFor="let tag of course.tags" disabled>
+              {{ tag | titlecase }}
+            </mat-chip>
+          </mat-chip-listbox>
+          <div class="flex items-center">
+            <span *ngFor="let star of generateStars(course.rating)" class="star">
+              <mat-icon *ngIf="star === 'full'">star</mat-icon>
+              <mat-icon *ngIf="star === 'half'">star_half</mat-icon>
+              <mat-icon *ngIf="star === 'empty'">star_border</mat-icon>
+            </span>
+          </div>
+          <span class="price">{{ getFormattedPrice(course.price) | async }}</span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

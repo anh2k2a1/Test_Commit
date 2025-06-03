@@ -1,0 +1,629 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\commands\\users\\forgotpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\commands\\users\\forgotpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\users\\forgotpasswordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\users\\forgotpasswordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\persistence\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\containerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\containerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\dtos\\forgotpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\dtos\\forgotpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\transactions\\gettransactionbyuserandnumberhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\transactions\\gettransactionbyuserandnumberhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\transactions\\listtransactionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\transactions\\listtransactionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\persistence\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\queries\\transactions\\gettransactionbyuserandnumberquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\queries\\transactions\\gettransactionbyuserandnumberquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\models\\financialcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\models\\financialcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\models\\reportbudgetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\models\\reportbudgetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\users\\getuserbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\users\\getuserbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\queries\\users\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\queries\\users\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\persistence\\repositories\\budgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\repositories\\budgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\commands\\budgets\\updatebudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\commands\\budgets\\updatebudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\interfaces\\ibudgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ibudgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\budgets\\getreportbudgethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\budgets\\getreportbudgethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\queries\\budgets\\getreportbudgetquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\queries\\budgets\\getreportbudgetquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\infrastructure\\persistence\\dbcontext\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E871395A-B578-4C86-B259-42AC9C07CCDB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\dbcontext\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\commands\\budgets\\deletebudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\commands\\budgets\\deletebudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\budgets\\updatebudgetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\budgets\\updatebudgetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\budgets\\createbudgetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\budgets\\createbudgetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\commands\\budgets\\createbudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\commands\\budgets\\createbudgetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\api\\controllers\\budgetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBBC0953-84E4-471C-B7A4-15EBE4AE1B87}|API\\API.csproj|solutionrelative:api\\controllers\\budgetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\queries\\budgets\\listbudgetsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\queries\\budgets\\listbudgetsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\application\\cqrs\\handlers\\budgets\\listbudgetsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B807A2-C3C3-4715-8765-88C9B28B1F24}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\budgets\\listbudgetsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|c:\\users\\haianh\\documents\\github\\project_ki3\\project_ki3\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3ACC4A44-018E-43A2-B788-83ABA697B06E}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Services\\EmailService.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:20:05.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:30:27.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:32:46.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:19:20.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwBwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:06:58.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ForgotPasswordHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Users\\ForgotPasswordHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Users\\ForgotPasswordHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Users\\ForgotPasswordHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Users\\ForgotPasswordHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:22:16.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ForgotPasswordCommand.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Users\\ForgotPasswordCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Commands\\Users\\ForgotPasswordCommand.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Users\\ForgotPasswordCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\Commands\\Users\\ForgotPasswordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:25:52.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:00:03.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ForgotPasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\DTOs\\ForgotPasswordRequest.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\DTOs\\ForgotPasswordRequest.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\DTOs\\ForgotPasswordRequest.cs",
+              "RelativeToolTip": "Application\\CQRS\\DTOs\\ForgotPasswordRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:29:06.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ContainerConfig.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\ContainerConfig.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ContainerConfig.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\ContainerConfig.cs",
+              "RelativeToolTip": "Infrastructure\\ContainerConfig.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:47:49.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T08:04:18.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AutofacModule.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\AutofacModule.cs",
+              "RelativeDocumentMoniker": "API\\AutofacModule.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\AutofacModule.cs",
+              "RelativeToolTip": "API\\AutofacModule.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:49:23.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ListTransactionsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Transactions\\ListTransactionsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Transactions\\ListTransactionsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Transactions\\ListTransactionsQueryHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Transactions\\ListTransactionsQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:59:38.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ITransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\ITransactionRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\ITransactionRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\ITransactionRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\ITransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:00:46.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwDMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:01:15.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "API\\Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:09:53.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetTransactionByUserAndNumberHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Transactions\\GetTransactionByUserAndNumberHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Transactions\\GetTransactionByUserAndNumberHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Transactions\\GetTransactionByUserAndNumberHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Transactions\\GetTransactionByUserAndNumberHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:58:42.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetTransactionByUserAndNumberQuery.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Transactions\\GetTransactionByUserAndNumberQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Queries\\Transactions\\GetTransactionByUserAndNumberQuery.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Transactions\\GetTransactionByUserAndNumberQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Queries\\Transactions\\GetTransactionByUserAndNumberQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:58:11.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\Course.cs",
+              "RelativeToolTip": "Domain\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:51:36.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetUserByIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Users\\GetUserByIdHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Users\\GetUserByIdHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Users\\GetUserByIdHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Users\\GetUserByIdHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:50:52.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetUserByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Users\\GetUserByIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Queries\\Users\\GetUserByIdQuery.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Users\\GetUserByIdQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Queries\\Users\\GetUserByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:50:43.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UpdateBudgetCommand.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\UpdateBudgetCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Commands\\Budgets\\UpdateBudgetCommand.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\UpdateBudgetCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\Commands\\Budgets\\UpdateBudgetCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:39:50.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FinancialCourse.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\FinancialCourse.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\FinancialCourse.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\FinancialCourse.cs",
+              "RelativeToolTip": "Domain\\Models\\FinancialCourse.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:47:42.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReportBudgetResult.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\ReportBudgetResult.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\ReportBudgetResult.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\ReportBudgetResult.cs",
+              "RelativeToolTip": "Domain\\Models\\ReportBudgetResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:17:06.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetReportBudgetHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\GetReportBudgetHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Budgets\\GetReportBudgetHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\GetReportBudgetHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Budgets\\GetReportBudgetHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:55:07.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GetReportBudgetQuery.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Budgets\\GetReportBudgetQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Queries\\Budgets\\GetReportBudgetQuery.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Budgets\\GetReportBudgetQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Queries\\Budgets\\GetReportBudgetQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:54:16.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BudgetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:10:03.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\DBContext\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\DBContext\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Infrastructure\\Persistence\\DBContext\\MongoDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\DBContext\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:55:52.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IBudgetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IBudgetRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IBudgetRepository.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Interfaces\\IBudgetRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IBudgetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:10:26.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateBudgetCommand.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\CreateBudgetCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Commands\\Budgets\\CreateBudgetCommand.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\CreateBudgetCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\Commands\\Budgets\\CreateBudgetCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:39:22.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DeleteBudgetCommand.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\DeleteBudgetCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Commands\\Budgets\\DeleteBudgetCommand.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Commands\\Budgets\\DeleteBudgetCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\Commands\\Budgets\\DeleteBudgetCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:39:47.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UpdateBudgetCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\UpdateBudgetCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Budgets\\UpdateBudgetCommandHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\UpdateBudgetCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Budgets\\UpdateBudgetCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:40:10.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Budget.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\Budget.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Budget.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Models\\Budget.cs",
+              "RelativeToolTip": "Domain\\Models\\Budget.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA8wBUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:28:26.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateBudgetCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\CreateBudgetCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Budgets\\CreateBudgetCommandHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\CreateBudgetCommandHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Budgets\\CreateBudgetCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:37:56.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BudgetsController.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\BudgetsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BudgetsController.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\API\\Controllers\\BudgetsController.cs",
+              "RelativeToolTip": "API\\Controllers\\BudgetsController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwFUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:21:01.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ListBudgetsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Budgets\\ListBudgetsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Queries\\Budgets\\ListBudgetsQuery.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Queries\\Budgets\\ListBudgetsQuery.cs",
+              "RelativeToolTip": "Application\\CQRS\\Queries\\Budgets\\ListBudgetsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:10:51.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ListBudgetsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\ListBudgetsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\Budgets\\ListBudgetsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Application\\CQRS\\Handlers\\Budgets\\ListBudgetsQueryHandler.cs",
+              "RelativeToolTip": "Application\\CQRS\\Handlers\\Budgets\\ListBudgetsQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:05:48.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\HaiAnh\\Documents\\GitHub\\project_ki3\\Project_ki3\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-22T15:49:41.317Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

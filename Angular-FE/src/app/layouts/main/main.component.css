@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9f8fb;
+}
+
+/* Drawer Container */
+mat-drawer-container {
+  height: 100%;
+  background-color: #f9f8fb;
+}
+
+/* Side Drawer */
+mat-drawer {
+  background-color: white;
+  color: #333;
+  border-radius: 0;
+  width: 280px; /* mặc định đồng bộ với .sidenav-container */
+  transition: width 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Drawer Content */
+mat-drawer-content {
+  background-color: #f9f8fb;
+  padding: 0;
+}
+
+/* Tablet and small laptop */
+@media (max-width: 768px) {
+  mat-drawer {
+    width: 80px; /* Thu gọn giống side-nav.component.css */
+  }
+
+  mat-drawer-content {
+    margin-left: 80px; /* Căn lại nội dung nếu cần */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  mat-drawer-container {
+    flex-direction: column;
+  }
+
+  mat-drawer {
+    width: 100%; /* Drawer chiếm toàn bộ chiều ngang */
+    height: auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  mat-drawer-content {
+    margin-top: 60px; /* Nếu muốn nội dung nằm dưới thanh menu ngang */
+  }
+}

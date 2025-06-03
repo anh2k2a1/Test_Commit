@@ -1,0 +1,63 @@
+
+<div *ngIf="course">
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="400"
+      [src]="currentVideoUrl"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <mat-card *ngIf="!isPurchased">
+    <mat-card-header>
+      <mat-card-title>{{ course.title }}</mat-card-title>
+      <mat-card-subtitle>{{ course.desc }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let tag of course.tags">{{
+          tag | titlecase
+        }}</mat-chip>
+      </mat-chip-listbox>
+      <div class="flex items-center">
+        <span
+          *ngFor="let star of generateStars(course.rating)"
+          class="star flex items-center"
+        >
+          <mat-icon *ngIf="star === 'full'">star</mat-icon>
+          <mat-icon *ngIf="star === 'half'">star_half</mat-icon>
+          <mat-icon *ngIf="star === 'empty'">star_border</mat-icon>
+        </span>
+        <span class="s-subtitle ms-1" style="opacity: 0.5"
+          >({{ course.reviewCount }})</span
+        >
+      </div>
+      <span class="price">{{ getFormattedPrice(course.price) | async }}</span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" *ngIf="!isPurchased">
+        Buy Now
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-list *ngIf="isPurchased">
+    <mat-list-item
+      *ngFor="let item of courseItems; let i = index"
+      [class.current]="item.isLearning"
+      class="p-2"
+      (click)="selectVideo(i)"
+    >
+      <div class="flex items-center justify-between">
+        <div class="flex-col ms-1">
+          <span matLine>{{ item.title }}</span>
+          <span matLine class="subtitle">{{ item.subTitle }}</span>
+        </div>
+        <mat-icon matListIcon
+          >{{ item.isLearning ? "play_circle" : "video_library" }}
+        </mat-icon>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

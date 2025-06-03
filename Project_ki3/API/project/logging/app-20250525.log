@@ -1,0 +1,6 @@
+[00:15:44 INF] Goal Reminder Service is starting.
+[00:15:45 INF] No goals with upcoming reminders found.
+[00:15:46 INF] Now listening on: http://localhost:5101
+[00:15:46 INF] Application started. Press Ctrl+C to shut down.
+[00:15:46 INF] Hosting environment: Development
+[00:15:46 INF] Content root path: C:\Users\HaiAnh\Documents\GitHub\project_ki3\Project_ki3\API

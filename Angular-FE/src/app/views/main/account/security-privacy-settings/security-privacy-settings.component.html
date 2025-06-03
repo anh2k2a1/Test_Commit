@@ -1,0 +1,7 @@
+<h3>Cài đặt bảo mật & quyền riêng tư</h3>
+
+<mat-checkbox [(ngModel)]="twoFactorAuth">Xác thực hai yếu tố (2FA)</mat-checkbox>
+<mat-checkbox [(ngModel)]="loginAlerts">Thông báo đăng nhập bất thường</mat-checkbox>
+<mat-checkbox [(ngModel)]="dataSharing">Chia sẻ dữ liệu với bên thứ ba</mat-checkbox>
+
+<button mat-raised-button color="primary" style="margin-top: 20px;" (click)="onSave()">Lưu cài đặt</button>

@@ -1,0 +1,55 @@
+mat-form-field {
+  width: 100%;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+.form-error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.transaction-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+}
+.transaction-header,
+.transaction-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transaction-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--mat-divider-color);
+}
+
+.transaction-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-category-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.transaction-actions {
+  display: flex;
+  gap: 8px;
+}
+
+mat-card.mb-2 {
+  margin-bottom: 16px;
+}

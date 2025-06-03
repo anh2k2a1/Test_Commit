@@ -1,0 +1,59 @@
+<div class="sidenav-container collapsed">
+  <!-- User Profile Section -->
+  <div class="user-profile">
+    <label for="avatar-upload">
+      <img [src]="avatarSrc" alt="User Avatar" class="avatar">
+    </label>
+    <input id="avatar-upload" type="file" accept="image/*" (change)="onImageChange($event)" style="display: none;">
+    
+    <div class="user-info">
+      <h3>{{ username }}</h3>
+      <p>{{ email }}</p>
+    </div>
+  </div>
+
+  <!-- Navigation Items -->
+  <div class="nav-items">
+    <ng-container *ngFor="let nav of navs; let i = index">
+      <!-- Regular nav item (no sub-items) -->
+      <a *ngIf="!nav.subItems" 
+         [routerLink]="nav.route" 
+         routerLinkActive="active"
+         class="nav-item"
+         [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>
+          {{ 
+            nav.name === 'Dashboard' ? 'dashboard' : 
+            nav.name === 'Transaction' ? 'payment' : 
+            nav.name === 'Goal' ? 'flag' : 
+            nav.name === 'Course' ? 'school' : 
+            'settings' 
+          }}
+        </mat-icon>
+        <span class="nav-text">{{ nav.name }}</span>
+      </a>
+
+      <!-- Nav item with sub-items -->
+      <mat-expansion-panel *ngIf="nav.subItems" 
+                           class="nav-expansion-panel"
+                           [expanded]="nav.isExpanded"
+                           (opened)="nav.isExpanded = true"
+                           (closed)="nav.isExpanded = false">
+        <mat-expansion-panel-header class="nav-item">
+          <mat-icon>
+            {{ nav.name === 'Setting' ? 'settings' : 'folder' }}
+          </mat-icon>
+          <span class="nav-text">{{ nav.name }}</span>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item *ngFor="let subItem of nav.subItems" 
+             [routerLink]="subItem.route"
+             routerLinkActive="active-sub-item">
+            {{ subItem.name }}
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </ng-container>
+  </div>
+</div>

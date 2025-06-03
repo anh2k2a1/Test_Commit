@@ -1,0 +1,56 @@
+<!-- account-information.component.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Họ và tên</mat-label>
+    <input matInput formControlName="name" placeholder="Nhập họ và tên">
+    <mat-error *ngIf="form.get('name')?.hasError('required')">Bắt buộc nhập</mat-error>
+    <mat-error *ngIf="form.get('name')?.hasError('minlength')">Ít nhất 2 ký tự</mat-error>
+    <mat-error *ngIf="form.get('name')?.hasError('maxlength')">Tối đa 50 ký tự</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Nhập email">
+    <mat-error *ngIf="form.get('email')?.hasError('required')">Bắt buộc nhập</mat-error>
+    <mat-error *ngIf="form.get('email')?.hasError('email')">Email không hợp lệ</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Số điện thoại</mat-label>
+    <input matInput formControlName="phone" placeholder="Nhập số điện thoại">
+    <mat-error *ngIf="form.get('phone')?.hasError('required')">Bắt buộc nhập</mat-error>
+    <mat-error *ngIf="form.get('phone')?.hasError('pattern')">Số điện thoại không hợp lệ</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Ngày sinh</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="birthDate" placeholder="Chọn ngày sinh">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="form.get('birthDate')?.hasError('required')">Bắt buộc chọn ngày sinh</mat-error>
+  </mat-form-field>
+
+  <mat-radio-group formControlName="gender" class="gender-group">
+    <mat-radio-button value="male">Nam</mat-radio-button>
+    <mat-radio-button value="female">Nữ</mat-radio-button>
+    <mat-radio-button value="other">Khác</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Bio</mat-label>
+    <textarea matInput formControlName="bio" rows="3" placeholder="Thông tin thêm về bạn"></textarea>
+    <mat-hint align="end">{{form.get('bio')?.value?.length || 0}} / 200</mat-hint>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-stroked-button type="button" (click)="onCancel()">Hủy</button>
+    <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid || loading">
+      <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="18"></mat-progress-spinner>
+      <span *ngIf="!loading">Lưu thay đổi</span>
+    </button>
+  </div>
+
+  <div class="success-message" *ngIf="success">
+    Cập nhật thông tin thành công!
+  </div>
+</form>

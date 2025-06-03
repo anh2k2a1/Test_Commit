@@ -1,0 +1,169 @@
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+/* Nền trắng cho header */
+.white-header {
+  background-color: white !important;
+  color: black !important;
+}
+
+mat-toolbar.hidden {
+  top: -100px;
+}
+
+/* Giữ lại nếu bạn dùng cho home/contact */
+.primary-bg {
+  background-color: #ffffff;
+  color: white;
+}
+
+.centered {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.drawer-open {
+  width: 78%;
+}
+
+mat-toolbar-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Các item trong nav-bar */
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  height: 100%;
+}
+
+/* Link điều hướng */
+.nav-link {
+  color: #535353;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+}
+
+.nav-link:hover {
+  color: #61f161;
+}
+
+.nav-link:active {
+  color: #4bd14b;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-icon {
+  color: #535353;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.flag-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.lang-text {
+  font-size: 14px;
+  color: #535353;
+}
+
+.budget-display {
+  margin-right: 16px;
+  font-weight: 500;
+  color: #535353;
+}
+
+.mobile-menu-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 1100;
+  display: none;
+}
+
+.mobile-menu-lang-btn {
+  background: none;
+  border: none;
+  color: #2ecc71;
+  font-weight: 600;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-menu-lang-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.mobile-menu-lang-btn .flag-icon {
+  margin-right: 8px;
+}
+
+@media (max-width: 800px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #2ecc71;
+    font-weight: 600;
+  }
+
+  .mobile-menu a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .lang-switcher,
+  a[routerLink="/auth/login"] {
+    display: none !important;
+  }
+}
